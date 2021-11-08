@@ -1,6 +1,6 @@
 # Twitter Clone
 
-## Github commands
+## Git commands
 
 ```
 git init
