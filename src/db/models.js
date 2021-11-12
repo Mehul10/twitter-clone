@@ -16,32 +16,34 @@ const colusername ={
     unique: true,
     allowNull: false
 }
-const users= db.define('user',{
+
+
+const Users= db.define('user',{
     id: colid,
     username: colusername
 })
-const posts= db.define('post',{
+const Posts= db.define('post',{
     id: colid,
     body: {
         type: Sequelize.DataTypes.STRING(100),
         allowNull:false
     }
 })
-const comments=db.define('comment',{
+const Comments=db.define('comment',{
     id:colid,
 })
-users.hasMany(posts)
-posts.belongsTo(users)
+Users.hasMany(Posts)
+Posts.belongsTo(Users)
 
-posts.hasMany(comments)
-comments.belongsTo(posts)
+Posts.hasMany(Comments)
+Comments.belongsTo(Posts)
 
-user.hasMany(comments)
-comments.belongsTo(users)
+Users.hasMany(Comments)
+Comments.belongsTo(Users)
 
 module.exports= {
     db,
-    posts,
-    users,
-    comments
+    Posts,
+    Users,
+    Comments
 }
