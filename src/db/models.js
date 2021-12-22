@@ -1,6 +1,6 @@
-const { Sequelize } = require('sequelize')
-const sequelize=require('sequelize')
-const db=new sequelize({
+// const { Sequelize } = require('sequelize')
+const Sequelize=require('sequelize')
+const db=new Sequelize({
     dialect : 'mysql',
     database: 'twitter',
     username: 'mehhul',
@@ -24,13 +24,20 @@ const Users= db.define('user',{
 })
 const Posts= db.define('post',{
     id: colid,
+    title: {
+        type: Sequelize.DataTypes.STRING(50),
+        allowNull: false
+    },
     body: {
-        type: Sequelize.DataTypes.STRING(100),
+        type: Sequelize.DataTypes.TEXT,
         allowNull:false
     }
 })
 const Comments=db.define('comment',{
     id:colid,
+    body: {
+        type: Sequelize.DataTypes.TEXT('tiny'),
+    }
 })
 Users.hasMany(Posts)
 Posts.belongsTo(Users)

@@ -10,7 +10,8 @@ async function createUser(usern)
 
 module.exports= {
     createUser
-}
+ }
+// // db.sync({force:true})
 // async function task()
 // {
 //     console.log('hello')
