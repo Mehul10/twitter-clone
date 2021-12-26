@@ -12,11 +12,30 @@ async function createNewPost(userId,title,body) {
 // 1. {username: ''}
 // 2. {title: ''}
 async function showAllPosts(query){
-
+    //query not handled here
+    const posts=await Posts.findAll({include:[Users]})      //we can include another model while finding if there is a relation between that model and the current model in the db
+    return posts
 }
-async function task(){
-    console.log(await createNewPost(1,'First Post','Hello wannabe twitter'))
-    console.log(await createNewPost(3,'Second Post','Hello twt'))
-
+module.exports={
+    createNewPost,
+    showAllPosts
 }
-task()
+// async function task(){
+//     console.log(await createNewPost(1,'Third Post','or are you quora?'))
+//     console.log(await createNewPost(2,'Fourth Post','maybe facebook?'))
+
+// }
+// task()
+
+// BACK TICKS- instead of using single quotes, use backticks as they help in string templating
+// ${}- this is a placeholder syntax
+
+
+// async function task2(){
+//     const posts=await showAllPosts()
+//     for(let p of posts)
+//     {
+//         console.log(`${p.title}\n${p.user.username}\n${p.body}\n--------------\n`)
+//     }
+// }
+// task2()

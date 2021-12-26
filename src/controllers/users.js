@@ -11,13 +11,17 @@ async function createUser(usern)
 module.exports= {
     createUser
  }
-// // db.sync({force:true})
-// async function task()
-// {
-//     console.log('hello')
-//     console.log(await createUser('mehhul'))
-//     console.log('------------------')
-//     console.log(await createUser('somebitch'))
-//     console.log('------------------')
-// }
-// task()
+
+ //test code
+
+//db.sync({force:true})
+async function task()
+{
+    console.log('hello')
+    console.log(await createUser('mehhul'))
+    console.log('------------------')
+    console.log(await createUser('somebitch'))
+    console.log('------------------')
+
+}
+task()
