@@ -51,6 +51,8 @@ TWT-CLONE\SRC
 
 ### routes
 
+* Routes are a way of doing .use() in file where app is not defined. So, instead of app.use() we do route.use() and export this route and map it in the server file.
+
 * These routes are used to serve data on the front end
 
 * They use the functions defined in the controllers to fetch/update the data
