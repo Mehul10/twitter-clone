@@ -3,8 +3,14 @@ const app=express()
 // const models=require('./db/models')
 // const db=models.db
 const {db} =require('./db/models')
+const { usersRoute} = require('./routes/users')
+const { postsRoute } = require('./routes/posts')
 
-db.sync({force:true})   //use {force:true} to create the table again
+app.use('/api/posts', postsRoute)
+app.use('/api/users', usersRoute)
+
+app.use('/',express.static(__dirname+'/public'))
+db.sync()   //use {force:true} to create the table again
     .then(()=>{
         app.listen(4444, () =>{
             console.log('Server started at http://localhost:4444')
