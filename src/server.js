@@ -1,5 +1,7 @@
 const express=require('express')
 const app=express()
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 // const models=require('./db/models')
 // const db=models.db
 const {db} =require('./db/models')

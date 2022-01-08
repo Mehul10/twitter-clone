@@ -8,7 +8,7 @@ const {
 const route= Router()
 
 //to get all users
-route.get('/:id', async(req,res)=>{     // since the functions imported from controllers access the db hence we need to write async in out middleware because we are awaiting those functions
+route.get('/:id', async(req,res)=>{     // since the functions imported from controllers access the db hence we need to write async in our middleware because we are awaiting those functions
      let user;
      if(isNaN(parseInt(req.params.id)))
      {
@@ -33,7 +33,7 @@ route.get('/:id', async(req,res)=>{     // since the functions imported from con
 
 route.post('/:name',async (req,res)=>{
     
-        const user= await createUser(req.params.name)
+        const user= await createUser(req.params.name)   // A post request has both body and url paramsa
         res.status(201).send(user)
   
 })

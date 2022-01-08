@@ -57,6 +57,9 @@ TWT-CLONE\SRC
 
 * They use the functions defined in the controllers to fetch/update the data
 
+    1. Get request on users route gets the user by id or username
+    2. Post request on the same users route creates new user with username    
+
 ### public
 
 * Keeps the frontend files to be served
