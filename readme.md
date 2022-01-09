@@ -24,12 +24,24 @@ grant all privileges on twitter.* to mehhul;
 flush privileges;
 ```
 ## Project Structure
+
+### Backend(Server)
 ```
 TWT-CLONE\SRC      
 ├───controllers
 ├───db
 ├───public
 └───routes
+```
+
+### Frontend (Client Side Code)
+```
+TWT-CLONE\SRC\PUBLIC
+├───app                     # our own frontend JS code
+├───components              # our own HTML files/components
+├───css                     # CSS liburaries we are using
+├───fonts                   
+└───js                      # JS libraries we are using
 ```
 ## Project Flow
 
@@ -56,9 +68,6 @@ TWT-CLONE\SRC
 * These routes are used to serve data on the front end
 
 * They use the functions defined in the controllers to fetch/update the data
-
-    1. Get request on users route gets the user by id or username
-    2. Post request on the same users route creates new user with username    
 
 ### public
 
@@ -91,3 +100,17 @@ TWT-CLONE\SRC
 3. add a comment
 
 ### Likes [TBD]
+
+## API Documentation
+
+1. POST /users\
+    Post request on the users route creates new user with username  
+
+2. GET /users/{userId}\
+    Get request on users route gets the user by id or username
+
+3. GET /posts\
+    Gets all the posts
+
+4. POST /posts\
+    Creates new post with userId, title, body
