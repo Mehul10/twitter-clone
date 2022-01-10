@@ -33,7 +33,7 @@ route.get('/:id', async(req,res)=>{     // since the functions imported from con
 
 route.post('/:name',async (req,res)=>{
     
-        const user= await createUser(req.params.name)   // A post request has both body and url paramsa
+        const user= await createUser(req.params.name)   // A post request has both body and url params
         res.status(201).send(user)
   
 })
