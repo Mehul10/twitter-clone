@@ -114,3 +114,6 @@ TWT-CLONE\SRC\PUBLIC
 
 4. POST /posts\
     Creates new post with userId, title, body
+
+    ### Mistakes that wasted a lot of time
+    1. while selecting the navbar didn't put # with the name inside $ and wasted many hours and ended up wasting 2 days actually.
