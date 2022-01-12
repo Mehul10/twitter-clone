@@ -117,3 +117,9 @@ TWT-CLONE\SRC\PUBLIC
 
     ### Mistakes that wasted a lot of time
     1. while selecting the navbar didn't put # with the name inside $ and wasted many hours and ended up wasting 2 days actually.
+
+    2. z-index issue
+
+    3. only put # while accessing ids not assigning
+
+    4. don't write id in class

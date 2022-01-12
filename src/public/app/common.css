@@ -1,6 +1,7 @@
 #navbar{
     position: sticky;
     top: 0px;
+    z-index: 1; /*so that the post cards come below the navbar, so we increase the z index of navbar*/
 }
 #footer{
     padding-top: 0.5rem;
