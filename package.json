@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Mehul10/twitter-clone#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0"
   },

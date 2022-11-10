@@ -13,7 +13,7 @@ function login(usern) {
     ? JSON.parse(window.localStorage.user)
     : null;
   //console.log(currentuser)
-  if (!currentuser) {
+  //if (!currentuser) {
     $.get("/api/users/" + usern, {}, (user) => {
       if (user) {
         console.log("Logged in as", user.username);
@@ -22,10 +22,11 @@ function login(usern) {
         $("#nav-username").text(currentuser.username);
       }
     });
-  } else {
-    console.log("Resuming session as", currentuser.username);
-    $("#nav-username").text(currentuser.username);
-  }
+  //} 
+  // else {
+  //   console.log("Resuming session as", currentuser.username);
+  //   $("#nav-username").text(currentuser.username);
+  // }
 }
 
 

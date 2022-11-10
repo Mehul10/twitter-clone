@@ -13,7 +13,8 @@ async function createNewPost(userId,title,body) {
 // 2. {title: ''}
 async function findAllPosts(query){
     //query not handled here
-    const posts=await Posts.findAll({include:[Users]})      //we can include another model while finding if there is a relation between that model and the current model in the db
+    const posts=await Posts.findAll({include:[Users]})      //we can include another model while finding if there is a relation between 
+                                                            //that model and the current model in the db
     return posts
 }
 module.exports={
